@@ -343,6 +343,18 @@
   .footer-divider { width: 48px; height: 1px; background: rgba(201,168,106,0.3); margin: 0 auto 1.5rem; }
   .footer-copy { font-size: 0.67rem; color: rgba(255,255,255,0.18); letter-spacing: 0.05em; line-height: 1.8; }
 
+  /* BADGES */
+  .badges-section { background: var(--ivory); }
+  .badges-grid { display: flex; gap: 2.5rem; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: 3rem; }
+  .badge-item { display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; }
+  .badge-item img { width: 110px; height: 110px; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(76,42,90,0.15)); transition: transform 0.2s; }
+  .badge-item img:hover { transform: translateY(-4px); }
+  .badge-item-name { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--plum-dark); font-weight: 600; max-width: 130px; line-height: 1.4; }
+  .badge-item-org { font-size: 0.65rem; letter-spacing: 0.08em; color: var(--charcoal); opacity: 0.5; margin-top: 0.2rem; }
+  .badges-verify { text-align: center; margin-top: 2.5rem; font-size: 0.82rem; color: var(--charcoal); opacity: 0.6; }
+  .badges-verify a { color: var(--plum); text-decoration: none; border-bottom: 1px solid rgba(76,42,90,0.3); transition: color 0.2s; }
+  .badges-verify a:hover { color: var(--plum-dark); }
+
   @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   .fade-up { opacity: 0; animation: fadeUp 0.7s ease forwards; }
   .fade-up-1 { animation-delay: 0.1s; } .fade-up-2 { animation-delay: 0.25s; } .fade-up-3 { animation-delay: 0.4s; } .fade-up-4 { animation-delay: 0.55s; }
@@ -566,6 +578,7 @@
         <p class="section-body light" style="margin-top:1rem;">That moment confirmed everything. You can be dismissed by a professional and still be right. You can have normal labs and still have something going on. The body does not lie. It communicates. You just need someone who knows how to listen.</p>
         <p class="section-body light" style="margin-top:1rem;">I did not unlearn nursing. I expanded beyond it. Now I combine nursing knowledge, trichology expertise, cosmetology knowledge, functional medicine principles, and real lived experience to help women stop guessing and finally understand their body at the root.</p>
         <p class="section-body light" style="margin-top:1rem;">You are not here for another product. You are here because something feels off and you are ready for real answers. This is where you stop chasing symptoms and start understanding your body. This is where you become a Root Seeker.</p>
+        <p style="margin-top:1.75rem;font-size:0.78rem;color:rgba(255,255,255,0.5);letter-spacing:0.05em;">Want to verify my credentials? <a href="https://www.credly.com/users/j-nique-smith" target="_blank" style="color:var(--gold-light);text-decoration:none;border-bottom:1px solid rgba(201,168,106,0.4);">View my verified badges on Credly</a></p>
         <div class="about-credentials">
           <div class="about-cred">Registered Nurse (RN)</div>
           <div class="about-cred">Certified Trichologist (CT)</div>
@@ -617,6 +630,47 @@
         <a href="https://jnique-smith.mykajabi.com/offers/D2yc7zLo/checkout" class="btn-secondary" style="font-size:0.75rem;padding:0.75rem 1.5rem;">Find your pattern</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- BADGES -->
+<section class="badges-section" style="padding:5rem 2rem; background:var(--taupe);">
+  <div class="section-inner" style="text-align:center;">
+    <p class="section-label" style="justify-content:center;">Verified certifications</p>
+    <h2 class="section-title">Credentials you can <em>verify.</em></h2>
+    <div class="divider centered"></div>
+    <p class="section-body" style="margin:0 auto 0;text-align:center;">Every certification listed on this site is verifiable. These are not self-assigned titles. They are earned, examined, and independently verified through the American Medical Certification Association.</p>
+    <div class="badges-grid">
+      <div class="badge-item">
+        <a href="https://www.credly.com/users/j-nique-smith" target="_blank">
+          <img src="badge_tc.png" alt="Trichology Certification badge from AMCA">
+        </a>
+        <div class="badge-item-name">Trichology Certification</div>
+        <div class="badge-item-org">AMCA Exams</div>
+      </div>
+      <div class="badge-item">
+        <a href="https://www.credly.com/users/j-nique-smith" target="_blank">
+          <img src="badge_atc.png" alt="Associate Trichology Certification badge from AMCA">
+        </a>
+        <div class="badge-item-name">Associate Trichology Certification</div>
+        <div class="badge-item-org">AMCA Exams</div>
+      </div>
+      <div class="badge-item">
+        <a href="https://www.credly.com/users/j-nique-smith" target="_blank">
+          <img src="badge_hlsc.png" alt="Hair Loss Specialist Certification badge from AMCA">
+        </a>
+        <div class="badge-item-name">Hair Loss Specialist Certification</div>
+        <div class="badge-item-org">AMCA Exams</div>
+      </div>
+      <div class="badge-item">
+        <a href="https://usti.edu" target="_blank">
+          <img src="badge_usti.png" alt="United States Trichology Institute badge">
+        </a>
+        <div class="badge-item-name">US Trichology Institute</div>
+        <div class="badge-item-org">USTI</div>
+      </div>
+    </div>
+    <p class="badges-verify">AMCA badges independently verified through Credly. <a href="https://www.credly.com/users/j-nique-smith" target="_blank">View full credential profile</a></p>
   </div>
 </section>
 
