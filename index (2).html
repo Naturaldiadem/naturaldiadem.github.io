@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natural Diadem | Hair & Scalp Root Cause Specialist</title>
+<meta name="description" content="Natural Diadem — Certified Trichologist and Registered Nurse J'Nique Smith helps women understand what their hair and scalp symptoms are really telling them about their body. Root cause hair and scalp investigation.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C; --gold-light: #E8C97A; --gold-pale: #F7EDD5;
+    --plum: #5B2D8E; --plum-light: #8A5BBF; --plum-pale: #EDE5F7;
+    --lavender: #C4A8E0; --cream: #FAF7F2;
+    --bark: #1A1A1A; --bark-mid: #4A3728; --white: #FFFFFF;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Outfit', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--cream); color: var(--bark); overflow-x: hidden; line-height: 1.6; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,247,242,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(201,168,76,0.2); padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+  .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+  .nav-logo img { height: 52px; width: 52px; object-fit: contain; }
+  .nav-logo-text { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--plum); letter-spacing: 0.02em; line-height: 1.2; }
+  .nav-logo-text span { display: block; font-size: 0.6rem; font-family: var(--sans); font-weight: 400; color: var(--bark-mid); letter-spacing: 0.15em; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
+  .nav-links a { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bark-mid); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--plum); }
+  .nav-cta { background: var(--plum); color: var(--white) !important; padding: 0.5rem 1.1rem; border-radius: 2px; }
+  .nav-cta:hover { background: var(--plum-light) !important; }
+
+  .hero { min-height: 100vh; padding: 8rem 2rem 5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto; }
+  .hero-eyebrow { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+  .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+  .hero h1 { font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 300; line-height: 1.1; color: var(--bark); margin-bottom: 1.5rem; }
+  .hero h1 em { font-style: italic; color: var(--plum); }
+  .hero-body { font-size: 1.05rem; color: var(--bark-mid); line-height: 1.8; margin-bottom: 2.5rem; max-width: 480px; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2.5rem; }
+  .btn-primary { background: var(--plum); color: var(--white); padding: 0.9rem 2rem; font-family: var(--sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: none; cursor: pointer; text-decoration: none; display: inline-block; border-radius: 2px; transition: background 0.2s, transform 0.15s; }
+  .btn-primary:hover { background: var(--plum-light); transform: translateY(-1px); }
+  .btn-ghost { color: var(--bark-mid); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+  .btn-ghost:hover { color: var(--plum); }
+  .btn-ghost::after { content: '→'; }
+  .hero-credentials { display: flex; gap: 1rem; flex-wrap: wrap; padding-top: 2rem; border-top: 1px solid rgba(201,168,76,0.25); }
+  .credential-pill { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bark-mid); display: flex; align-items: center; gap: 0.4rem; }
+  .credential-pill::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+  .hero-image-frame { width: 100%; max-width: 460px; aspect-ratio: 4/5; background: var(--plum-pale); border-radius: 4px; overflow: hidden; border: 1px solid rgba(91,45,142,0.15); position: relative; }
+  .hero-image-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .hero-quote-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(91,45,142,0.92) 0%, transparent 100%); padding: 2.5rem 1.75rem 1.75rem; }
+  .hero-quote { font-family: var(--serif); font-size: 1.1rem; font-style: italic; color: var(--white); line-height: 1.5; font-weight: 300; }
+  .hero-quote-attr { margin-top: 0.5rem; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-light); }
+
+  section { padding: 6rem 2rem; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+  .section-label::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
+  .section-title { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.2; color: var(--bark); margin-bottom: 1.25rem; }
+  .section-title em { font-style: italic; color: var(--plum); }
+  .section-body { font-size: 1rem; color: var(--bark-mid); line-height: 1.85; max-width: 580px; }
+
+  .signal-card { background: var(--plum-pale); border: 1px solid rgba(91,45,142,0.15); border-radius: 4px; padding: 1.5rem 1.25rem; }
+  .signal-card-icon { font-family: var(--serif); font-size: 2rem; font-weight: 300; color: var(--plum); margin-bottom: 0.75rem; display: block; }
+
+  .patterns { background: var(--bark); padding: 6rem 2rem; }
+  .patterns .section-label { color: var(--gold); }
+  .patterns .section-label::before { background: var(--gold); }
+  .patterns .section-title { color: var(--white); }
+  .patterns .section-title em { color: var(--gold-light); }
+  .patterns .section-body { color: rgba(255,255,255,0.7); margin-bottom: 3rem; }
+  .patterns-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .pattern-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(201,168,76,0.2); border-radius: 4px; padding: 1.75rem 1.5rem; transition: border-color 0.2s; }
+  .pattern-card:hover { border-color: rgba(201,168,76,0.5); }
+  .pattern-num { font-family: var(--serif); font-size: 2rem; font-weight: 300; color: rgba(201,168,76,0.3); line-height: 1; margin-bottom: 0.75rem; }
+  .pattern-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--gold-light); margin-bottom: 0.75rem; }
+  .pattern-desc { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+  .how { background: var(--white); }
+  .how .section-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; align-items: start; }
+  .how-steps { display: flex; flex-direction: column; gap: 2.5rem; margin-top: 1rem; }
+  .how-step { display: flex; gap: 1.5rem; align-items: flex-start; }
+  .step-num { font-family: var(--serif); font-size: 3rem; font-weight: 300; color: rgba(201,168,76,0.25); line-height: 1; flex-shrink: 0; min-width: 2.5rem; }
+  .step-content h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; color: var(--bark); margin-bottom: 0.5rem; }
+  .step-content p { font-size: 0.9rem; color: var(--bark-mid); line-height: 1.7; }
+
+  .offers { background: var(--cream); }
+  .offers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .offer-card { background: var(--white); border: 1px solid rgba(201,168,76,0.2); border-radius: 4px; padding: 2rem 1.75rem; position: relative; transition: border-color 0.2s, transform 0.2s; }
+  .offer-card:hover { border-color: rgba(91,45,142,0.3); transform: translateY(-2px); }
+  .offer-card.featured { border-color: var(--plum); border-width: 1.5px; }
+  .offer-featured-tag { position: absolute; top: -0.65rem; left: 1.5rem; background: var(--plum); color: var(--white); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 2px; }
+  .offer-price { font-family: var(--serif); font-size: 1.6rem; font-weight: 300; color: var(--gold); margin-bottom: 0.35rem; }
+  .offer-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--bark); margin-bottom: 0.75rem; }
+  .offer-desc { font-size: 0.85rem; color: var(--bark-mid); line-height: 1.7; margin-bottom: 1.5rem; }
+  .offer-link { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--plum); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 0.4rem; transition: gap 0.2s; }
+  .offer-link:hover { gap: 0.75rem; }
+  .offer-link::after { content: '→'; }
+
+  .about { background: var(--bark); padding: 6rem 2rem; }
+  .about .section-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .about .section-label { color: var(--gold); }
+  .about .section-label::before { background: var(--gold); }
+  .about .section-title { color: var(--white); }
+  .about .section-title em { color: var(--gold-light); }
+  .about .section-body { color: rgba(255,255,255,0.7); max-width: none; margin-bottom: 1.25rem; }
+  .about-credentials { display: flex; flex-direction: column; gap: 0.65rem; margin-top: 1.5rem; }
+  .about-cred { display: flex; align-items: center; gap: 0.75rem; font-size: 0.8rem; color: rgba(255,255,255,0.65); }
+  .about-cred::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+  .about-image { width: 100%; border-radius: 4px; overflow: hidden; border: 1px solid rgba(201,168,76,0.2); }
+  .about-image img { width: 100%; height: 520px; object-fit: cover; object-position: top; display: block; }
+
+  .story { background: var(--cream); }
+  .story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3rem; }
+  .story-card { background: var(--white); border: 1px solid rgba(201,168,76,0.15); border-radius: 4px; padding: 2rem 1.75rem; }
+  .story-card-title { font-family: var(--serif); font-size: 1rem; font-weight: 400; color: var(--gold); margin-bottom: 1rem; line-height: 1.3; }
+  .story-card-quote { font-family: var(--serif); font-size: 0.98rem; font-style: italic; font-weight: 300; color: var(--bark); line-height: 1.75; }
+
+  .quiz-cta { background: var(--plum); padding: 6rem 2rem; text-align: center; }
+  .quiz-cta .section-label { justify-content: center; color: var(--lavender); }
+  .quiz-cta .section-label::before { display: none; }
+  .quiz-cta .section-title { color: var(--white); text-align: center; margin: 0 auto 1.25rem; }
+  .quiz-cta .section-title em { color: var(--gold-light); }
+  .quiz-cta .section-body { color: rgba(255,255,255,0.75); margin: 0 auto 3rem; text-align: center; }
+  .gold-divider { width: 48px; height: 1px; background: var(--gold); margin: 2rem auto; }
+  .btn-gold { background: var(--gold); color: var(--bark); padding: 1rem 2.5rem; font-family: var(--sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border: none; cursor: pointer; text-decoration: none; display: inline-block; border-radius: 2px; transition: background 0.2s, transform 0.15s; }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  /* CONTACT */
+  .contact { background: var(--white); padding: 6rem 2rem; }
+  .contact .section-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .contact-info { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+  .contact-item { display: flex; align-items: center; gap: 1rem; }
+  .contact-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--plum-pale); border: 1px solid rgba(91,45,142,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; }
+  .contact-item-text strong { display: block; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bark-mid); margin-bottom: 0.2rem; }
+  .contact-item-text a { font-size: 0.95rem; color: var(--plum); text-decoration: none; font-weight: 400; transition: color 0.2s; }
+  .contact-item-text a:hover { color: var(--plum-light); }
+  .social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-top: 2rem; }
+  .social-btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem 1rem; background: var(--cream); border: 1px solid rgba(201,168,76,0.2); border-radius: 2px; text-decoration: none; color: var(--bark-mid); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: border-color 0.2s, color 0.2s, background 0.2s; }
+  .social-btn:hover { border-color: var(--plum); color: var(--plum); background: var(--plum-pale); }
+  .explore-card { background: var(--plum); border-radius: 4px; padding: 2.5rem 2rem; text-align: center; }
+  .explore-card h3 { font-family: var(--serif); font-size: 1.6rem; font-weight: 300; color: var(--white); margin-bottom: 0.75rem; }
+  .explore-card p { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 2rem; }
+
+  footer { background: #111; padding: 3rem 2rem; text-align: center; }
+  .footer-logo { font-family: var(--serif); font-size: 1.4rem; font-weight: 300; color: var(--gold-light); letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .footer-tagline { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 2rem; }
+  .footer-links { display: flex; gap: 2rem; justify-content: center; list-style: none; flex-wrap: wrap; margin-bottom: 2rem; }
+  .footer-links a { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold-light); }
+  .footer-social { display: flex; gap: 1.25rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+  .footer-social a { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+  .footer-social a:hover { color: var(--gold-light); }
+  .footer-copy { font-size: 0.7rem; color: rgba(255,255,255,0.2); letter-spacing: 0.05em; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-up { opacity: 0; animation: fadeUp 0.7s ease forwards; }
+  .fade-up-1 { animation-delay: 0.1s; } .fade-up-2 { animation-delay: 0.25s; } .fade-up-3 { animation-delay: 0.4s; } .fade-up-4 { animation-delay: 0.55s; }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 7rem 1.5rem 4rem; }
+    .how .section-inner, .about .section-inner, .contact .section-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .offers-grid, .patterns-grid, .story-grid { grid-template-columns: 1fr; }
+    .social-grid { grid-template-columns: repeat(2, 1fr); }
+    nav { padding: 0.75rem 1.25rem; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <img src="logo.png" alt="Natural Diadem logo">
+    <div class="nav-logo-text">Natural Diadem<span>Hair and Scalp Root Cause</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#signals">The Signals</a></li>
+    <li><a href="#patterns">The Patterns</a></li>
+    <li><a href="#offers">Work With Me</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://jnique-smith.mykajabi.com/offers/D2yc7zLo/checkout" class="nav-cta">Take the Quiz</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <p class="hero-eyebrow fade-up fade-up-1">Certified Trichologist · Registered Nurse</p>
+    <h1 class="fade-up fade-up-2">Your hair is<br><em>trying to tell you</em><br>something.</h1>
+    <p class="hero-body fade-up fade-up-3">You have tried the products. Seen the specialists. But the shedding, the flaking, the tenderness keeps coming back. That is because most treatments are aimed at the hair. Not at what is driving it.</p>
+    <div class="hero-actions fade-up fade-up-4">
+      <a href="https://jnique-smith.mykajabi.com/offers/D2yc7zLo/checkout" class="btn-primary">Take the $7 Hair Signal Assessment</a>
+      <a href="#signals" class="btn-ghost">See how this works</a>
+    </div>
+    <div class="hero-credentials fade-up fade-up-4">
+      <div class="credential-pill">RN</div>
+      <div class="credential-pill">CT</div>
+      <div class="credential-pill">IHP Level 1 and 2</div>
+      <div class="credential-pill">CHLP</div>
+      <div class="credential-pill">Certified Scalp Health and Hair Care Educator</div>
+    </div>
+  </div>
+  <div class="fade-up fade-up-3" style="display:flex; justify-content:center;">
+    <div class="hero-image-frame">
+      <img src="jnique.png" alt="J'Nique Smith, RN, CT">
+      <div class="hero-quote-overlay">
+        <p class="hero-quote">"I am not a hair person who learned about health. I am a health person who understands that hair is part of the body."</p>
+        <p class="hero-quote-attr">J'Nique Smith, RN, CT</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SIGNALS -->
+<section id="signals" style="background:var(--white);">
+  <div class="section-inner">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center;">
+      <div>
+        <p class="section-label">What your scalp is telling you</p>
+        <h2 class="section-title">This is not a <em>hair problem.</em></h2>
+        <p class="section-body">Your scalp is one of the first places your body sends a distress signal. Shedding, flaking, itching, tenderness. These are not random. They are your body communicating. Most people spend years chasing the symptom. We go to the root.</p>
+        <div style="display:flex;flex-direction:column;gap:1.25rem;margin-top:2rem;">
+          <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+            <div style="width:34px;height:34px;border-radius:50%;background:var(--plum-pale);border:1px solid rgba(91,45,142,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--plum);font-size:0.75rem;font-weight:500;">01</div>
+            <div><strong style="display:block;color:var(--bark);font-size:0.9rem;font-weight:500;margin-bottom:0.2rem;">The products are not working and they never will</strong><p style="font-size:0.875rem;color:var(--bark-mid);line-height:1.6;">Topical solutions cannot fix an internal problem. If something is off in your body, your hair will keep telling you until you listen.</p></div>
+          </div>
+          <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+            <div style="width:34px;height:34px;border-radius:50%;background:var(--plum-pale);border:1px solid rgba(91,45,142,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--plum);font-size:0.75rem;font-weight:500;">02</div>
+            <div><strong style="display:block;color:var(--bark);font-size:0.9rem;font-weight:500;margin-bottom:0.2rem;">You have been dismissed. Not wrong.</strong><p style="font-size:0.875rem;color:var(--bark-mid);line-height:1.6;">If a doctor told you your labs were normal but something still feels off, you were not imagining it. There is a gap between normal and optimal. That is where we work.</p></div>
+          </div>
+          <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+            <div style="width:34px;height:34px;border-radius:50%;background:var(--plum-pale);border:1px solid rgba(91,45,142,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--plum);font-size:0.75rem;font-weight:500;">03</div>
+            <div><strong style="display:block;color:var(--bark);font-size:0.9rem;font-weight:500;margin-bottom:0.2rem;">Your hair is the signal, not the problem</strong><p style="font-size:0.875rem;color:var(--bark-mid);line-height:1.6;">Root cause investigation means looking at stress load, gut health, hormones, and nutrient status. Not just what is on your scalp.</p></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div class="signal-card"><span class="signal-card-icon">✦</span><h4 style="color:var(--plum);font-size:0.85rem;font-weight:500;margin-bottom:0.35rem;">Shedding</h4><p style="color:var(--bark-mid);font-size:0.78rem;line-height:1.5;">Often connected to stress response, thyroid, or nutrient depletion. Not the shampoo you are using.</p></div>
+        <div class="signal-card"><span class="signal-card-icon">✦</span><h4 style="color:var(--plum);font-size:0.85rem;font-weight:500;margin-bottom:0.35rem;">Flaking</h4><p style="color:var(--bark-mid);font-size:0.78rem;line-height:1.5;">Persistent flaking can signal gut imbalance, immune dysregulation, or inflammatory response.</p></div>
+        <div class="signal-card"><span class="signal-card-icon">✦</span><h4 style="color:var(--plum);font-size:0.85rem;font-weight:500;margin-bottom:0.35rem;">Tenderness</h4><p style="color:var(--bark-mid);font-size:0.78rem;line-height:1.5;">Scalp pain without a visible cause is your nervous system and circulation talking. It is worth listening.</p></div>
+        <div class="signal-card"><span class="signal-card-icon">✦</span><h4 style="color:var(--plum);font-size:0.85rem;font-weight:500;margin-bottom:0.35rem;">Itching</h4><p style="color:var(--bark-mid);font-size:0.78rem;line-height:1.5;">Chronic itch is often an inflammatory or fungal signal driven by what is happening systemically. Not topically.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATTERNS -->
+<section class="patterns" id="patterns">
+  <div class="section-inner">
+    <p class="section-label">The Hair Signal Assessment</p>
+    <h2 class="section-title">Which internal pattern is driving <em>your signals?</em></h2>
+    <p class="section-body">The $7 Hair Signal Assessment helps you identify which of six internal patterns is most dominant in your hair and scalp symptoms. Each pattern is a root cause starting point. Not a diagnosis. A direction for deeper investigation.</p>
+    <div class="patterns-grid">
+      <div class="pattern-card"><div class="pattern-num">01</div><div class="pattern-title">Hormone Signaling Pattern</div><p class="pattern-desc">If your hair changes align with cycle shifts, menopause, or energy dips, your results may point here. This pattern reflects how hormones like estrogen and progesterone influence hair growth and scalp balance.</p></div>
+      <div class="pattern-card"><div class="pattern-num">02</div><div class="pattern-title">Gut Absorption Pattern</div><p class="pattern-desc">Digestive discomfort, food sensitivities, or nutrient deficiencies may relate to this pattern. It reflects how the body is absorbing the nutrients your hair and scalp depend on.</p></div>
+      <div class="pattern-card"><div class="pattern-num">03</div><div class="pattern-title">Nervous System Stress Pattern</div><p class="pattern-desc">If hair changes appear during high stress, burnout, or poor sleep, this pattern may be involved. Chronic stress signals influence hair shedding and scalp sensitivity.</p></div>
+      <div class="pattern-card"><div class="pattern-num">04</div><div class="pattern-title">Inflammation and Immune Pattern</div><p class="pattern-desc">Flares, redness, irritation, or autoimmune conditions may reflect this pattern. It highlights how immune activity and inflammation disrupt the scalp environment and hair growth cycle.</p></div>
+      <div class="pattern-card"><div class="pattern-num">05</div><div class="pattern-title">Blood Sugar Pattern</div><p class="pattern-desc">Energy crashes, sugar cravings, or irregular eating patterns may connect here. Blood sugar fluctuations influence hormones, inflammation, and hair growth signals.</p></div>
+      <div class="pattern-card"><div class="pattern-num">06</div><div class="pattern-title">Detox Burden Pattern</div><p class="pattern-desc">Exposure to environmental toxins, heavy product use, or sluggish detox symptoms may point here. This pattern reflects how the body's detox pathways influence hair and scalp balance.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:3.5rem;">
+      <a href="https://jnique-smith.mykajabi.com/offers/D2yc7zLo/checkout" class="btn-gold">Take the $7 Assessment and Find Your Pattern</a>
+      <p style="margin-top:1rem;font-size:0.78rem;color:rgba(255,255,255,0.4);letter-spacing:0.05em;">Less than 5 minutes. Personalized results.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="section-inner">
+    <div>
+      <p class="section-label">The process</p>
+      <h2 class="section-title">How we get to the <em>root</em></h2>
+      <p class="section-body">This is not a one-size-fits-all hair care program. It is a root cause investigation combining clinical nursing, trichology, and integrative health to find what is actually driving your symptoms.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step"><div class="step-num">01</div><div class="step-content"><h3>Identify your pattern</h3><p>Take the $7 Hair Signal Assessment. In minutes you will understand which of six internal patterns may be driving your scalp and hair symptoms and where to start investigating.</p></div></div>
+      <div class="how-step"><div class="step-num">02</div><div class="step-content"><h3>Learn the language of your body</h3><p>Your personalized result walks you through what your specific pattern typically means and how the body communicates through the scalp and hair follicle.</p></div></div>
+      <div class="how-step"><div class="step-num">03</div><div class="step-content"><h3>Go deeper with support</h3><p>From the Beyond The Symptoms membership to one-on-one coaching and functional lab interpretation, there is a path for wherever you are in your journey.</p></div></div>
+      <div class="how-step"><div class="step-num">04</div><div class="step-content"><h3>Understand, not just treat</h3><p>You stop chasing symptoms and start reading your body. That is the shift that changes everything and it does not require a prescription.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section class="offers" id="offers">
+  <div class="section-inner">
+    <p class="section-label">Work with me</p>
+    <h2 class="section-title">Every woman starts <em>somewhere.</em></h2>
+    <p class="section-body">Whether you are just starting to ask questions or you have been searching for years, there is a place for you here.</p>
+    <div class="offers-grid">
+      <div class="offer-card">
+        <div class="offer-price">$7</div>
+        <div class="offer-title">Hair Signal Assessment</div>
+        <p class="offer-desc">A targeted assessment that identifies which of six internal patterns is most dominant in your hair and scalp symptoms. Your root cause starting point. Not a diagnosis. A direction.</p>
+        <a href="https://jnique-smith.mykajabi.com/offers/D2yc7zLo/checkout" class="offer-link">Start the assessment</a>
+      </div>
+      <div class="offer-card">
+        <div class="offer-price">$37</div>
+        <div class="offer-title">If Your Scalp Could Talk</div>
+        <p class="offer-desc">The root cause guide that connects your scalp symptoms to what is happening inside the body. Plain language. Real clinical insight. A foundation for understanding. Not just treating.</p>
+        <a href="https://jnique-smith.mykajabi.com/j-nique-smith" class="offer-link">Get the guide</a>
+      </div>
+      <div class="offer-card featured">
+        <div class="offer-featured-tag">Most Popular</div>
+        <div class="offer-price">From $127/mo</div>
+        <div class="offer-title">Beyond The Symptoms Membership</div>
+        <p class="offer-desc">A community for women who want to understand their body long term. Weekly teaching, recorded sessions, lab education, and ongoing root cause investigation together.</p>
+        <a href="https://jnique-smith.mykajabi.com/j-nique-smith" class="offer-link">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div>
+      <p class="section-label">About J'Nique</p>
+      <h2 class="section-title">A health person who <em>understands hair.</em></h2>
+      <p class="section-body">Most hair specialists work from the outside in. I work from the inside out. As a Registered Nurse and Certified Trichologist, I spent years watching women get dismissed. Told their labs were fine. Handed a product. Sent home.</p>
+      <p class="section-body">I know what that feels like because I lived it. I was told everything was fine while my body was screaming. Scalp flakes, exhaustion, inflammation, and no answers. When I stopped waiting to be validated and started decoding my own symptoms, everything shifted. My body calmed down. My scalp calmed down. I finally felt heard by myself.</p>
+      <p class="section-body">That experience is why Natural Diadem exists. To give women the tools to understand what their body is actually saying before it has to say it louder.</p>
+      <div class="about-credentials">
+        <div class="about-cred">Registered Nurse (RN)</div>
+        <div class="about-cred">Certified Trichologist (CT)</div>
+        <div class="about-cred">Integrative Health Practitioner Level 1 and 2 (IHP)</div>
+        <div class="about-cred">Certified Hair Loss Practitioner (CHLP)</div>
+        <div class="about-cred">Certified Scalp Health and Hair Care Educator</div>
+        <div class="about-cred">Mentored by Dr. Steven Cabral and the US Trichology Institute (USTI)</div>
+        <div class="about-cred">EquiLife Functional Lab Testing Affiliate</div>
+      </div>
+    </div>
+    <div class="about-image">
+      <img src="jnique.png" alt="J'Nique Smith, RN, CT">
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="section-inner">
+    <p class="section-label">Her story</p>
+    <h2 class="section-title">She was not broken. <em>She was not being heard.</em></h2>
+    <p class="section-body">Before she became the practitioner, she was the patient. These are the real chapters of her healing journey.</p>
+    <div class="story-grid">
+      <div class="story-card">
+        <p class="story-card-title">Not Being Heard by Doctors</p>
+        <p class="story-card-quote">I was told everything was fine. Normal. Nothing to worry about. But my body was screaming. I had scalp flakes, exhaustion, inflammation, and no answers. When I learned to decode my symptoms instead of begging for someone to validate them, everything shifted. My body stopped crashing. My scalp calmed down. I finally felt heard by myself.</p>
+      </div>
+      <div class="story-card">
+        <p class="story-card-title">Healing After Years of Self-Hate</p>
+        <p class="story-card-quote">Before the healing came the self-hate. I did not know my body was not attacking me. It was protecting me. Once I understood what my symptoms were trying to say, the shame fell off. I stopped fighting myself. My confidence came back. My clarity came back. My body responded the moment I stopped treating it like the enemy.</p>
+      </div>
+      <div class="story-card">
+        <p class="story-card-title">Joint Pain That No One Connected</p>
+        <p class="story-card-quote">The joint pain was not random. It was inflammation, stress load, and nutrient depletion showing up in the loudest place it could get my attention. When I lowered the internal noise, the pain followed. I did not need stronger medications. I needed answers.</p>
+      </div>
+      <div class="story-card">
+        <p class="story-card-title">Bloated, Miserable, and Confused</p>
+        <p class="story-card-quote">The bloating, the constant heaviness, the migraines, the stabbing period pain. I lived like that for years. Once I learned how my gut, hormones, liver, and stress were connected, everything started aligning. My cycles changed. My migraines eased. My digestion calmed. My body was not broken. It was overwhelmed.</p>
+      </div>
+      <div class="story-card">
+        <p class="story-card-title">Itchy Skin and Constant Throat Clearing</p>
+        <p class="story-card-quote">I thought itchy skin was just eczema. I thought my constant throat clearing was just allergies. But my body was trying to detox through my skin and sinuses because it had no other place to send the overflow. When I lowered the toxins and supported my gut, the flare-ups faded. My body did not need another cream. It needed relief on the inside.</p>
+      </div>
+      <div class="story-card" style="background:var(--plum);border-color:var(--plum);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+        <p style="font-family:var(--serif);font-size:1.3rem;font-style:italic;font-weight:300;color:var(--white);line-height:1.5;margin-bottom:1.5rem;">"Your symptoms are not random. Your body is not broken. It is trying to communicate."</p>
+        <a href="https://jnique-smith.mykajabi.com/offers/D2yc7zLo/checkout" class="btn-gold" style="font-size:0.75rem;padding:0.75rem 1.5rem;">Find your pattern</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ CTA -->
+<section class="quiz-cta" id="quiz">
+  <div class="section-inner" style="max-width:680px;">
+    <p class="section-label" style="justify-content:center;">Your first step</p>
+    <h2 class="section-title">Find out which internal pattern is driving <em>your symptoms.</em></h2>
+    <div class="gold-divider"></div>
+    <p class="section-body">The Hair Signal Assessment takes less than five minutes. For $7 you get a personalized breakdown of your dominant internal pattern and a clear direction for where to start. No guessing. No more chasing symptoms.</p>
+    <a href="https://jnique-smith.mykajabi.com/offers/D2yc7zLo/checkout" class="btn-gold">Take the $7 Hair Signal Assessment</a>
+    <p style="margin-top:1rem;font-size:0.78rem;color:rgba(255,255,255,0.5);letter-spacing:0.05em;">$7 · Less than 5 minutes · Personalized pattern results</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div>
+      <p class="section-label">Get in touch</p>
+      <h2 class="section-title">Let's connect.</h2>
+      <p class="section-body">Have a question before you get started? Reach out directly or find me on social media.</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <div class="contact-item-text">
+            <strong>Email</strong>
+            <a href="mailto:info@naturaldiadem.com">info@naturaldiadem.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div class="contact-item-text">
+            <strong>Full Resource Hub</strong>
+            <a href="https://jnique-smith.mykajabi.com/j-nique-smith" target="_blank">Explore all offerings</a>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--bark-mid);font-weight:500;margin-top:2.5rem;margin-bottom:1rem;">Find me on social</p>
+      <div class="social-grid">
+        <a href="https://www.instagram.com/jniquesmith?igsh=bmtoeWgyNmt2dTR0" target="_blank" class="social-btn">Instagram</a>
+        <a href="https://www.facebook.com/share/14LhJW8Yjqo/" target="_blank" class="social-btn">Facebook</a>
+        <a href="https://www.tiktok.com/@jniques?_t=ZP-90ltLs38bRH&_r=1" target="_blank" class="social-btn">TikTok</a>
+        <a href="https://youtube.com/@jniques?si=nF9ILzCCmk3CAAk3" target="_blank" class="social-btn">YouTube</a>
+        <a href="https://v.lemon8-app.com/al/Ogrckrhmf" target="_blank" class="social-btn">Lemon8</a>
+        <a href="https://jnique-smith.mykajabi.com/j-nique-smith" target="_blank" class="social-btn">My Hub</a>
+      </div>
+    </div>
+    <div class="explore-card">
+      <h3>Ready to explore?</h3>
+      <p>Visit the full resource hub to browse all offerings, guides, memberships, and coaching options in one place.</p>
+      <a href="https://jnique-smith.mykajabi.com/j-nique-smith" target="_blank" class="btn-gold">Visit My Kajabi Hub</a>
+      <p style="margin-top:1.5rem;font-size:0.78rem;color:rgba(255,255,255,0.5);">Or start with the $7 Hair Signal Assessment</p>
+      <a href="https://jnique-smith.mykajabi.com/offers/D2yc7zLo/checkout" target="_blank" style="display:inline-block;margin-top:0.5rem;font-size:0.78rem;color:var(--gold-light);text-decoration:none;letter-spacing:0.08em;">Take the assessment →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Natural Diadem</div>
+  <p class="footer-tagline">Let's get to the root</p>
+  <ul class="footer-links">
+    <li><a href="#signals">The Signals</a></li>
+    <li><a href="#patterns">The Patterns</a></li>
+    <li><a href="#offers">Work With Me</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#story">Her Story</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/jniquesmith?igsh=bmtoeWgyNmt2dTR0" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/share/14LhJW8Yjqo/" target="_blank">Facebook</a>
+    <a href="https://www.tiktok.com/@jniques?_t=ZP-90ltLs38bRH&_r=1" target="_blank">TikTok</a>
+    <a href="https://youtube.com/@jniques?si=nF9ILzCCmk3CAAk3" target="_blank">YouTube</a>
+    <a href="https://v.lemon8-app.com/al/Ogrckrhmf" target="_blank">Lemon8</a>
+  </div>
+  <p class="footer-copy">2026 Natural Diadem. All rights reserved. Mentored by Dr. Steven Cabral and the US Trichology Institute.</p>
+</footer>
+
+</body>
+</html>
